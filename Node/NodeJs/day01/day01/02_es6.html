@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ES6新特性</title>
+    </head>
+    <body>
+        <script>
+            /*  // var 声明的变量，存在声明提升
+            // var a 
+            console.log(a);
+            var a = 1
+            var a = 2 
+      
+
+            // 新增变量声明方式
+            // let 声明的变量会提升，进入到暂时性的死区，只有在赋值后才允许访问
+            // console.log(b);
+            // 不允许重复声明
+            let b = 2
+            // let b = 3
+            b = 4
+            console.log(b);
+            
+                 
+
+            // 块级作用域
+            {
+                var n1 = 1
+                let n2 = 2  // 局部变量
+                const n3 =3  // 局部变量
+            }
+            console.log(n3);
+           
+            // 练习：使用循环计算1~100之间所有整数的和，使用let声明变量
+            // 1.循环中let声明的变量是局部变量
+            let sum = 0
+            for (let i = 0; i <= 100; i++) {
+                sum += i
+            }
+            console.log(sum);
+         
+
+            // 2.参数增强
+            // 如果有实参会覆盖默认值，没有的话才会使用默认值
+            function add(a, b, c = 0) {
+                // es6之前设置默认值
+                // if(b===undefined){
+                //b=0
+                // }
+                如果有传递的值， 就会把这个值赋给b
+                // b = 8000 || 0
+                /如果没有传递的值，就会执行右侧表达式，就会把右侧表达式赋给b
+                // b = undefined || 0
+                b = b || 0
+                console.log(a + b + c);
+            }
+            add(5000, 8000, 700)
+            add(5000, 8000)
+            add(5000)
+            
+              
+            //  逻辑运算符赋值，选择把其中一个表达式赋给变量；
+            // 如果执行了第一个表达式，没有执行第二个表达式，就会把第一个表达式赋给变量
+            // 如果执行了第一个表达式，又执行了第二个表达式，就会把第二个表达式赋给变量
+            var n1 = 1 || 2
+            var n2 = 1 && 2
+            console.log(n1, n2);
+            
+             
+
+
+            // 3.箭头函数
+            var arr = [23, 9, 78, 6, 45]
+            // 排序
+            // arr.sort(function(a, b) {
+            //     return a - b
+
+            // })
+            // arr.sort((a, b) => {
+            //     return a - b
+
+            // })
+            // 如果箭头函数的函数体只有一行代码，并且是return形式
+            arr.sort((a, b) => a - b)
+            console.log(arr);
+              */
+
+            // 练习：使用匿名函数创建函数getAvg，传递任意3个数字，返回平均值，使用箭头函数代替匿名函数
+            var getAvg = (a, b, c) => (a + b + c) / 3
+            console.log(getAvg(4, 4, 4));
+        </script>
+    </body>
+</html>
+ 

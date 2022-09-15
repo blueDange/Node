@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            // 练习：创建一个函数getDays,传递一个日期，返回这个日期是一年中的第几天
+            // getDays(2022,9,6) --> xxx
+            function getDays(year, month, date) {
+                // 创建Date对象，保存传递的日期
+                var d = new Date(year, month - 1, date)
+                // 计算2月份的天数
+                var second = year % 4 === 0 && year % 100 !== 0 || year % 400 === 0 ? 29 : 28
+                // 创建一个数组保存12个月每个月的天数
+                var arr = [31, second, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+                // 循环，获取前month-1个月天数总和
+                // 声明变量保存总和
+                for (var i = 0, sum = 0; i < month - 1; i++) {
+                    // console.log(i, arr[i]);
+                    // 把每个月天数加到sum
+                    sum += arr[i]
+                }
+                // 最后还要加上这个月过去的天数
+                return sum+date
+            }
+            var s=getDays(2022, 9, 6)
+            console.log(s);
+        </script>
+    </body>
+</html>
