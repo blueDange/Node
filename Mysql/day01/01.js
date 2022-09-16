@@ -60,7 +60,7 @@ var obj = {
     ename: 'aac',
     salary: '13000'
 };
-var a = '10';
+// var a = '10';
 pool.query('update emp set ? where eid = ? ', [obj, obj.eid], (err, r) => {
     if (err) {
         throw err;
