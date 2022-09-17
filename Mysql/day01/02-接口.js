@@ -14,7 +14,7 @@ app.listen(3000);
 app.use(express.static('public'));
 // 接口地址: http://127.0.0.1:3000/emp    路由的完整的地址
 // 请求方法: get;
-app.get('/v1/adds', (req, res) => {
+app.get('/v1/adds', (req, res, next) => {
     var obj = req.query;
     console.log(obj);
     pool.query('select * from emp where eid = ?', [obj.eid], (err, r) => {
